@@ -67,4 +67,4 @@ empty
 TODO:
 -understand why the output is the way it is
 -read up on locking and threading
-
+-read up on producer and consumer set up
