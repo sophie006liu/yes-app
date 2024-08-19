@@ -9,6 +9,7 @@ class Message_queue:
         self.lock = threading.Lock()
         self.producer_count = producer_count
         self.producer_count_lock = threading.Lock()
+        self.stop_event = threading.Event()
 
         if os.path.exists(self.filename):
             with open(self.filename, 'r') as f:

@@ -1,7 +1,7 @@
 from message_queue import Message_queue
 from producer import Producer
 from consumer import Consumer
-import time
+import time, threading
 
 def main():
     q = Message_queue('queue_data.json', 0)

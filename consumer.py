@@ -10,13 +10,13 @@ class Consumer(threading.Thread):
         self.name = name
 
     def run(self):
-        while True:
+        while not self.queue.stop_event.is_set():
             message = self.queue.dequeue()
             if message:
                 print(f"{self.name} consuming {message}")
             elif self.queue.all_producers_done() and not self.queue.queue:
-                print("All producers done")
-                print("Check if if it prints an empty string", self.queue.queue)
+                print("setting stop event")
+                self.queue.stop_event.set()
                 return
             else:
                 print(f"{self.name} found queue empty")
