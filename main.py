@@ -4,7 +4,7 @@ from consumer import Consumer
 import time
 
 def main():
-    q = Message_queue('queue_data.json')
+    q = Message_queue('queue_data.json', 0)
 
     # Create and start multiple producers
     producer1 = Producer(q, "Producer 1")
@@ -23,10 +23,6 @@ def main():
     # Wait for producers to finish
     producer1.join()
     producer2.join()
-
-    # Let consumers run indefinitely
-    while True:
-        time.sleep(1)
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,67 @@
+8/18
+
+Process vs Threads:
+- process is an instance of a running program, has memory space, can contain 
+    multiple threads, opening a web browser runs as a process
+- thread: sequence of instructions in a process, smallest unit of execution in a 
+    process
+
+Multi-threaded and Concurrent Systems:
+- The producer is a thread that generates data
+    - usually generates data and places into a shared resource like a queue
+- The consumer is a thread that processes data
+    - can write data toa database, sends data over to a network
+
+Thread Safety
+- Producers and consumers operate concurrently and access a shared queue
+- Synchronization used to avoid race condition
+- multiple threads (producers and consumers) modifying the shared resource can 
+    lead to data corruption or inconsistent states
+- Lock prevents other threads access to the shared resource
+
+-example: if two threads are incrementing the same global variable by one, you
+    some increments might get lost because they both read the same initial value
+    and then writing it back, when you write back, it could undo the changes made
+    by another variable
+
+The Shared Resource:
+- should be making sure that data is being added in the correct order even when
+the producers are all generating data CONCURRENTLY
+ 
+Stopping Condition:
+- the system should ahve condition under which it should stop   
+
+Pros:
+- decoupling, they don't need to wait for each other which improves efficiency
+- scalability: adding more producers and consumers to handle increased load w/o
+    changing overall system architecture
+- buffering: shared resource as like queue acts a buffer to handle bursts of 
+    activity
+
+Cons:
+- deadlocks: synchronization can lead to deadlocks where threads are waiting for
+    each other
+- producers can generate data faster than consumers process it
+
+Locking
+- prevents race condition by making sure only one thread can access code at a 
+    time
+1) acquires a lock, if lock is held by another thread, the thread has to wait
+2) ciritical section, after acquired then it can execute the section of the code
+3) release and let other threads acquire it
+
+ex: for the increment code: you can say "with lock: counter += 1" so that only 
+    one increment can be done at a time
+
+Types of Locks:
+- Reentrant lock: allows a thread to acquire the lock multiple times, prevents 
+    deadlock, useful when thread needs to lock a smthng it already locked before
+- Conditional varibales: used in conjunction with locks, allow threads to wait 
+    for certain conditions before continuing 
+
+Deadlocks:
+- sometimes one thread is waiting on another lock held by another thread
+- and they're waiting for each other
+- lock order should be acquired ina consistent other across threads
+- have timeouts so a thread isn't waiting indefinitely
+- deadlock detection

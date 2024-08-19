@@ -1,1 +1,1 @@
-distributed message queue project
+distributed message queue project to teach myself threading

@@ -1,0 +1,79 @@
+TRIAL 1:
+Producer 1 producing: Message 0 from Producer 1
+Producer 2 producing: Message 0 from Producer 2
+Consumer 1 consuming Message 0 from Producer 1
+Consumer 2 consuming Message 0 from Producer 2
+Producer 1 producing: Message 1 from Producer 1
+Producer 2 producing: Message 1 from Producer 2
+Consumer 2 consuming Message 1 from Producer 1
+Producer 1 producing: Message 2 from Producer 1
+Producer 2 producing: Message 2 from Producer 2
+Consumer 1 consuming Message 1 from Producer 2
+Producer 1 producing: Message 3 from Producer 1
+Producer 2 producing: Message 3 from Producer 2
+Consumer 2 consuming Message 2 from Producer 1
+Consumer 1 consuming Message 2 from Producer 2
+Producer 1 producing: Message 4 from Producer 1
+Producer 2 producing: Message 4 from Producer 2
+Consumer 2 consuming Message 3 from Producer 1
+Consumer 1 consuming Message 3 from Producer 2
+Consumer 2 consuming Message 4 from Producer 1
+Consumer 1 consuming Message 4 from Producer 2
+
+
+TRIAL 2:
+Producer 1 producing: Message 0 from Producer 1
+Producer 2 producing: Message 0 from Producer 2
+empty
+Consumer 1 found queue empty
+Consumer 2 consuming Message 0 from Producer 1
+Producer 1 producing: Message 1 from Producer 1
+Producer 2 producing: Message 1 from Producer 2
+Consumer 1 consuming Message 0 from Producer 2
+Consumer 2 consuming Message 1 from Producer 1
+Producer 1 producing: Message 2 from Producer 1
+Producer 2 producing: Message 2 from Producer 2
+Producer 1 producing: Message 3 from Producer 1
+Producer 2 producing: Message 3 from Producer 2
+Consumer 1 consuming Message 1 from Producer 2
+Consumer 2 consuming Message 2 from Producer 1
+Producer 1 producing: Message 4 from Producer 1
+Producer 2 producing: Message 4 from Producer 2
+Consumer 1 consuming Message 2 from Producer 2
+Consumer 2 consuming Message 3 from Producer 1
+Consumer 1 consuming Message 3 from Producer 2
+Consumer 2 consuming Message 4 from Producer 1
+Consumer 1 consuming Message 4 from Producer 2
+Consumer 2 found queue empty
+Consumer 1 found queue empty
+
+TRIAL 3
+Producer 1 producing: Message 0 from Producer 1
+Producer 2 producing: Message 0 from Producer 2
+Consumer 1 consuming Message 0 from Producer 1
+empty
+Consumer 2 found queue empty
+Producer 2 producing: Message 1 from Producer 2
+Producer 1 producing: Message 1 from Producer 1
+Consumer 1 consuming Message 0 from Producer 2
+Consumer 2 consuming Message 1 from Producer 2
+Producer 1 producing: Message 2 from Producer 1
+Producer 2 producing: Message 2 from Producer 2
+Producer 1 producing: Message 3 from Producer 1
+Producer 2 producing: Message 3 from Producer 2
+Consumer 1 consuming Message 1 from Producer 1
+Consumer 2 consuming Message 2 from Producer 1
+Producer 1 producing: Message 4 from Producer 1
+Producer 2 producing: Message 4 from Producer 2
+Consumer 1 consuming Message 2 from Producer 2
+Consumer 2 consuming Message 3 from Producer 1
+Consumer 1 consuming Message 3 from Producer 2
+Consumer 2 consuming Message 4 from Producer 1
+Consumer 1 consuming Message 4 from Producer 2
+Consumer 2 found queue empty
+Consumer 2 found queue empty
+Consumer 1 found queue empty
+Consumer 2 found queue empty
+Consumer 1 found queue empty
+Consumer 2 found queue empty
+Consumer 1 found queue empty
