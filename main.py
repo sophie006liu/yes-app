@@ -6,16 +6,16 @@ import time, threading
 def main():
     q = Message_queue('queue_data.json', 0)
 
-    # Create and start multiple producers
-    producer1 = Producer(q, "Producer 1")
-    producer2 = Producer(q, "Producer 2")
+    producer1 = Producer(q, "Producer 1", 3, 0)
+    producer2 = Producer(q, "Producer 2", 3, 1)
+    producer3 = Producer(q, "Producer 3", 3, 2)
 
-    # Create and start multiple consumers
     consumer1 = Consumer(q, "Consumer 1")
     consumer2 = Consumer(q, "Consumer 2")
 
     producer1.start()
     producer2.start()
+    producer3.start()
 
     consumer1.start()
     consumer2.start()
