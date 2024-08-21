@@ -1,4 +1,14 @@
 8/19:
+i think  i forogt to log my progress... 
+
+I implemented a priority queue system for the producer's chats
+
+I learned how heappush and heappop works, but i want to use this tool a little more
+
+TODO:
+- Rate-Limited Producers and consumers so they can only enqueue a certain number of messages per time interval
+- Load balancer so consumers can takeover for others
+- threaded conversations
 
 8/18 10 pm:
 
